@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="flex.css">
+    <title>Senku</title>
+    <script src="codigo.js"></script>
+
+</head>
+
+<body onload="lanzaderaJuego(); actualizarTiempo(); ">
+
+    <header>
+        <img id="logo" alt="logo" src="logo.png">
+
+        <h1>SENKU</h1>
+        <h2>Elimina todas las fichas para ganar</h2>
+
+    </header>
+    <div class="content">
+        <div id="titulo1" class="title"></div>
+        <br>
+        <table>
+            <tr>
+                <th>Tiempo</th>
+                <th>Fichas restantes</th>
+            </tr>
+            <tr>
+                <td id="tiempo"></td>
+                <td id="fichasRestantes"></td>
+            </tr>
+        </table>
+        <button onclick="abrirModal();" class="custom-btn btn-1"><span>Instrucciones</span></button>
+
+        <div id="msjModal2" class="modal">
+            <div class="modal-content">
+                <span onclick="cerrarModal();" class="close">&times;</span>
+                <h1>Senku</h1>
+                <h2>Instrucciones</h2>
+                <h3>Se juega con un tablero con diferentes formas según el modelo o el lugar de origen. Al inicio del juego están todos los
+                espacios ocupados, excepto por uno. El jugador debe mover una pieza por vez. Las piezas solo pueden moverse capturando
+                mediante un "salto" sobre otra, como en las damas. Solo se puede capturar en horizontal o en vertical, nunca en
+                diagonal. Así, al principio, solo pocas tienen posibilidad de moverse, capturando una. El objetivo del juego es eliminar
+                todas las piezas, dejando solo una en el tablero.</h3>
+            </div>
+
+        </div>
+        <div id="board" class="flex-col-c-c"></div>
+        <button onclick="window.location.href = 'index.html' " class="custom-btn btn-1"><span>Abandonar Partida</span></button>
+        
+    </div>
+
+    <footer>
+        <p>&copy; <a href="acerca.html">PCW</a>Practica3/<time datetime="2022-05-30">2022-05-30</time></p>
+    </footer>
+
+
+</body>

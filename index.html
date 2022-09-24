@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="flex.css">
+    <title>Senku</title>
+    <script src="codigo.js"></script>
+
+</head>
+
+<body onload="lanzaderaIndex();">
+
+
+    <header>
+        <img id="logo" alt="logo" src="logo.png">
+
+        <h1>SENKU</h1>
+        <h2>Deja una sola pieza en pie</h2>
+
+    </header>
+
+    <div class="content">
+
+            <h2 style="margin-left: 530px; margin-bottom: 50px; font-size: 30px;">Elige la version a jugar</h2>
+
+        <div id="Dificultad" class="dificultad">
+            <input id="cruz" checked type="radio" name="ele" onclick="modoEle(1);">Cruz
+            <input id="rombo" type="radio" name="ele" onclick="modoEle(2);">Rombo
+            <input id="tradicional" type="radio" name="ele" onclick="modoEle(3);">Tradicional<br>
+        </div>
+        <div class="botones">
+            <button onclick="jugar()" class="custom-btn btn-1"><span>Jugar</span></button>
+            <button onclick="mensajeModal()" class="custom-btn btn-1"><span>Ver puntuaciones</span></button>
+            
+            <div id="tabla1" class="abcd">
+                <h1>Puntuaciones</h1>
+                <table id="tablaPunt">
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <a href="acerca.html">PCW</a>Practica3/<time datetime="2022-05-30">2022-05-30</time></p>
+    </footer>
+</body>
+
+</html>
